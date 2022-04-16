@@ -37,15 +37,15 @@ object ArrayTasks {
     }
 
     fun singleNumber(nums: IntArray): Int {
-        val numMap = hashMapOf<Int, Int>()
+        val numList = mutableListOf<Int>()
 
         for (num in nums) {
-            if (numMap[num] != null) {
-                numMap[num] = numMap[num]!! + 1
+            if (numList.contains(num)) {
+                numList.remove(num)
             } else {
-                numMap[num] = 1
+                numList.add(num)
             }
         }
-        return numMap.filterValues { it == 1 }.map { (k) -> k }[0]
+        return numList[0]
     }
 }
