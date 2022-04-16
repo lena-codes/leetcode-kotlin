@@ -39,4 +39,12 @@ class Array {
         Assertions.assertEquals(k, ArrayTasks.removeDuplicates(n))
         Assertions.assertArrayEquals(expectedArray, n)
     }
+
+    @Test
+    fun `contains duplicates`() {
+        val n = intArrayOf(0, 0, 1, 1, 1, 2, 2, 3, 3, 4)
+        Assertions.assertTrue(
+            ArrayTasks.containsDuplicate(n)
+        )
+    }
 }
