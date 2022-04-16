@@ -1,7 +1,7 @@
 package solutions
 
 object ArrayTasks {
-    fun rotate(nums: IntArray, k: Int): Unit {
+    fun rotate(nums: IntArray, k: Int) {
         val shift = k % nums.size
         var right = nums.size - shift
         var left = 0
@@ -9,7 +9,7 @@ object ArrayTasks {
 
         for(index in nums.indices) {
             if(right < nums.size) {
-                nums[index] = tempArray[right];
+                nums[index] = tempArray[right]
                 right++
             } else {
                 nums[index] = tempArray[left]
