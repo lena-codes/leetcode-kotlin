@@ -37,15 +37,10 @@ object ArrayTasks {
     }
 
     fun singleNumber(nums: IntArray): Int {
-        val numList = mutableListOf<Int>()
-
-        for (num in nums) {
-            if (numList.contains(num)) {
-                numList.remove(num)
-            } else {
-                numList.add(num)
-            }
+        var current = 0
+        for (index in nums.indices) {
+            current = current xor (nums[index])
         }
-        return numList[0]
+        return current
     }
 }
