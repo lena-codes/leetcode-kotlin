@@ -19,13 +19,13 @@ object ArrayTasks {
     }
 
     fun removeDuplicates(nums: IntArray): Int {
-        var unique = 0
-        val list = ArrayList<Int>()
+        var unique = 1
+        var current = nums[0]
 
-        for (num in nums) {
-            if (!list.contains(num)) {
-                list.add(num)
-                nums[unique] = num
+        for (index in nums.indices) {
+            if (nums[index] > current) {
+                current = nums[index]
+                nums[unique] = nums[index]
                 unique++
             }
         }
