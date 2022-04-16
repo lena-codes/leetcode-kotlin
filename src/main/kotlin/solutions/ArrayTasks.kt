@@ -7,8 +7,8 @@ object ArrayTasks {
         var left = 0
         val tempArray = nums.copyOf()
 
-        for(index in nums.indices) {
-            if(right < nums.size) {
+        for (index in nums.indices) {
+            if (right < nums.size) {
                 nums[index] = tempArray[right]
                 right++
             } else {
@@ -16,5 +16,19 @@ object ArrayTasks {
                 left++
             }
         }
+    }
+
+    fun removeDuplicates(nums: IntArray): Int {
+        var unique = 0
+        val list = ArrayList<Int>()
+
+        for(num in nums) {
+            if(!list.contains(num)) {
+                list.add(num)
+                nums[unique] = num
+                unique++
+            }
+        }
+        return unique
     }
 }
