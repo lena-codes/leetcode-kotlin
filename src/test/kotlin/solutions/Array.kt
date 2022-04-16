@@ -47,4 +47,13 @@ class Array {
             ArrayTasks.containsDuplicate(n)
         )
     }
+
+    @Test
+    fun `single number`() {
+        val n = intArrayOf(2, 2, 1)
+        Assertions.assertEquals(
+            1,
+            ArrayTasks.singleNumber(n)
+        )
+    }
 }
