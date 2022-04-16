@@ -22,8 +22,8 @@ object ArrayTasks {
         var unique = 0
         val list = ArrayList<Int>()
 
-        for(num in nums) {
-            if(!list.contains(num)) {
+        for (num in nums) {
+            if (!list.contains(num)) {
                 list.add(num)
                 nums[unique] = num
                 unique++
